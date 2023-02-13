@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@threemedia/commitlint-config-gemini": [
+        "packages/commitlint-config-gemini/src/index.ts"
+      ],
       "@threemedia/commitlint-gemini": [
         "packages/commitlint-gemini-task/src/index.ts"
       ]

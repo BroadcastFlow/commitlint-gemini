@@ -1,14 +1,9 @@
 {
-  "name": "@threemedia/commitlint-plugin-gemini-rules",
+  "name": "@threemedia/commitlint-config-gemini",
   "version": "0.0.1",
-  "files": [
-    "index.js",
-    "index.mjs"
-  ],
+  "type": "commonjs",
   "main": "./index.js",
   "types": "index.d.ts",
-  "license": "MIT",
-  "description": "Gemini commitlint rules",
   "peerDependencies": {
     "@commitlint/lint": ">=7.6.0"
   },
