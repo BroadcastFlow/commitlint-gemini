@@ -2,15 +2,68 @@
   "name": "commitlint-gemini",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "nx": "nx",
+    "start": "nx serve",
+    "build": "nx build",
+    "test": "nx test",
+    "lint": "nx lint",
+    "affected:apps": "nx affected:apps",
+    "affected:libs": "nx affected:libs",
+    "affected:build": "nx affected:build",
+    "affected:e2e": "nx affected:e2e",
+    "affected:test": "nx affected:test",
+    "affected:lint": "nx affected:lint",
+    "affected:dep-graph": "nx affected:dep-graph",
+    "prepare": "husky install"
+  },
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "@swc/helpers": "~0.4.11"
+  },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.3",
+    "@commitlint/config-conventional": "^17.4.3",
+    "@jscutlery/semver": "^2.30.1",
+    "@nrwl/eslint-plugin-nx": "15.6.3",
     "@nrwl/js": "15.6.3",
+    "@nrwl/linter": "15.6.3",
     "@nrwl/nx-cloud": "latest",
+    "@nrwl/vite": "15.6.3",
     "@nrwl/workspace": "15.6.3",
+    "@swc/cli": "~0.1.55",
+    "@swc/core": "^1.2.173",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "@vitest/coverage-c8": "~0.25.8",
+    "@vitest/ui": "^0.25.8",
+    "eslint": "~8.15.0",
+    "eslint-config-prettier": "8.1.0",
+    "husky": "^8.0.0",
+    "jsdom": "~20.0.3",
+    "ngx-deploy-npm": "^5.0.0",
     "nx": "15.6.3",
     "prettier": "^2.6.2",
-    "typescript": "~4.8.2"
+    "typescript": "~4.8.2",
+    "vite": "^4.0.1",
+    "vite-plugin-dts": "~1.7.1",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-tsconfig-paths": "^4.0.2",
+    "vitest": "^0.25.8"
+  },
+  "keywords": [
+    "conventional-changelog",
+    "commitlint",
+    "commitlint-config",
+    "countersoft",
+    "gemini"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/threemedoa/commitlint-gemini.git",
+    "directory": "@threemedia/commitlint-gemini"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
