@@ -1,5 +1,5 @@
 {
-  "name": "@threemedia/commitlint-config-gemini",
+  "name": "@tma-pkg/commitlint-config-gemini",
   "version": "0.0.1",
   "type": "commonjs",
   "main": "./index.js",

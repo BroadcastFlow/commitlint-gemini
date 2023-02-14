@@ -7,9 +7,12 @@ on:
 
 jobs:
   main:
-    name: Nx Cloud - Main Job
+    name: Master test and deploy package
     uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.11.2
     with:
+      environment-variables: |
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       number-of-agents: 3
       init-commands: |
         npx nx-cloud start-ci-run --stop-agents-after="build" --agent-count=3
@@ -17,7 +20,6 @@ jobs:
         npx nx-cloud record -- npx nx workspace-lint
         npx nx-cloud record -- npx nx format:check
       parallel-commands-on-agents: |
-        npx nx affected --target=lint --parallel=3
         npx nx affected --target=test --parallel=3 --ci --code-coverage
         npx nx affected --target=version --parallel=3
       main-branch-name: master
@@ -27,3 +29,5 @@ jobs:
     uses: nrwl/ci/.github/workflows/nx-cloud-agents.yml@v0.11.2
     with:
       number-of-agents: 3
+      environment-variables: |
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

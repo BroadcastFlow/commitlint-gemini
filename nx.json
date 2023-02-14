@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "threemedia",
+  "npmScope": "tma-pkg",
   "affected": {
     "defaultBase": "master"
   },
