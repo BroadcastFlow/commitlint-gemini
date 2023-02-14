@@ -7,7 +7,7 @@ on:
 
 jobs:
   main:
-    name: Nx Cloud - Main Job
+    name: Master test and deploy package
     uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.11.2
     with:
       environment-variables: |

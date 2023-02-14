@@ -4,7 +4,7 @@ on: pull_request
 
 jobs:
   main:
-    name: Nx Cloud - Main Job
+    name: Build tests and linting
     uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.11.2
     with:
       number-of-agents: 3
