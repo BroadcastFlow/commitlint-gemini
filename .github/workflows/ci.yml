@@ -24,7 +24,6 @@ jobs:
         npx nx affected --target=version --parallel=3
       main-branch-name: master
 
-
   agents:
     name: Nx Cloud - Agents
     uses: nrwl/ci/.github/workflows/nx-cloud-agents.yml@v0.11.2
