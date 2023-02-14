@@ -10,9 +10,6 @@ jobs:
     name: Master test and deploy package
     uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.11.2
     with:
-      environment-variables: |
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        NPM_TOKEN: ${{secrets.NPM_TOKEN}}
       number-of-agents: 3
       init-commands: |
         npx nx-cloud start-ci-run --stop-agents-after="build" --agent-count=3
@@ -29,9 +26,6 @@ jobs:
     uses: nrwl/ci/.github/workflows/nx-cloud-agents.yml@v0.11.2
     with:
       number-of-agents: 3
-      environment-variables: |
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        NPM_TOKEN: ${{secrets.NPM_TOKEN}}
 
 
 
